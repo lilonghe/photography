@@ -47,14 +47,15 @@
         }
         
         ul {
-            column-count: 3;
             width: 100%;
-            column-gap: 40px;
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         
         li {
-            margin-bottom: 40px;
+            max-width: 300px;
+            height: 200px;
         }
 
         img {
@@ -160,16 +161,5 @@
             </ul>
         </div>
     </div>
-
-    <script src="./vanilla-tilt.min.js"></script>
-    <script type="text/javascript">
-        let imgs = document.querySelectorAll('li');
-        for(let i=0; i<imgs.length; i++) {
-            imgs[i].setAttribute('data-tilt', '')
-        }
-        VanillaTilt.init(imgs, {
-            scale: 1.1
-        });
-    </script>
 </body>
 </html>
